@@ -1,0 +1,23 @@
+{% extends "layouts/layout.html" %}
+{% block title %}Control{% endblock title %}
+{% block content -%}
+<main class="director-container" hx-ext="ws" ws-connect="/section">
+  {% include "fragments/section-display.html" %}
+  <div class="director-buttons">
+    <button hx-put="/section/type" hx-vals='{"section_type": "C"}'>C</button>
+    <button hx-put="/section/type" hx-vals='{"section_type": "V"}'>V</button>
+    <button hx-put="/section/type" hx-vals='{"section_type": "B"}'>B</button>
+    <button hx-put="/section/type" hx-vals='{"section_type": "P"}'>P</button>
+    <button hx-put="/section/type" hx-vals='{"section_type": "W"}'>W</button>
+    <button hx-put="/section/type" hx-vals='{"section_type": "E"}'>E</button>
+    <button hx-put="/section/type" hx-vals='{"section_type": "X"}'>X</button>
+    <button hx-put="/section/number" hx-vals='{"section_number": 1}'>1</button>
+    <button hx-put="/section/number" hx-vals='{"section_number": 2}'>2</button>
+    <button hx-put="/section/number" hx-vals='{"section_number": 3}'>3</button>
+    <button hx-put="/section/number" hx-vals='{"section_number": 4}'>4</button>
+    <button hx-put="/section/number" hx-vals='{"section_number": 5}'>5</button>
+    <button hx-put="/section/type" hx-vals='{"section_type": "R"}'>R</button>
+    <button hx-delete="/section">-</button>
+  </div>
+</main>
+{%- endblock content %}

@@ -1,0 +1,7 @@
+{% extends "layouts/layout.html" %}
+{% block title %}View{% endblock title %}
+{% block content -%}
+<main hx-ext="ws" ws-connect="/section">
+  {% include "fragments/section-display.html" %}
+</main>
+{%- endblock content %}
