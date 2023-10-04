@@ -2,7 +2,7 @@
 {% block title %}Control{% endblock title %}
 {% block content -%}
 <main class="director-container" hx-ext="ws" ws-connect="/section">
-  {% include "fragments/section-display.html" %}
+  {% include "fragments/section-display.html" -%}
   <div class="director-buttons">
     <button hx-put="/section/type" hx-vals='{"section_type": "C"}'>C</button>
     <button hx-put="/section/type" hx-vals='{"section_type": "V"}'>V</button>
